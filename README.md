@@ -1,4 +1,3 @@
-
 <h1>
 	The repository was created as report for challenge
 	<a href='https://github.com/near/stakewars-iii'>
@@ -12,11 +11,11 @@
 </a>
 </div>
 
-## Challenge 001
+## [Challenge 001](./content/challenge_001.md)
 
-- Shardnet wallet
-- VPS choice <small>(challenge 005)</small>
-- Deployment the NEAR CLI
+- [Shardnet wallet](./content/challenge_001.md#shardnet-wallet)
+- [VPS choice](./content/challenge_001.md#vps-choice) <small>(challenge 005)</small>
+- [Deployment NEAR CLI](./content/challenge_001.md#Deployment-NEAR-CLI)
 
 ## Challenge 002
 
@@ -35,7 +34,7 @@
 - Geting useful information from node by RPC on port 3030
 - Making alert
 
-## Challenge 005
+## [Challenge 005](./content/challenge_005.md)
 
 - Creating this github repository
 - Pricing description

@@ -1,10 +1,3 @@
-<style>
-btn{
-	color: white;
-	background-color: #0072CE;
-}
-</style>
-
 # Shardnet wallet
 
 <table>
@@ -14,9 +7,9 @@ btn{
 </tr>
 <tr>
     <td>
-		1. Go to <a href="https://wallet.shardnet.near.org/">https://wallet.shardnet.near.org/</a> and choose <btn>Create Account</btn>.
+		1. Go to <a href="https://wallet.shardnet.near.org/">https://wallet.shardnet.near.org/</a> and choose <b>Create Account</b>.
 		<p>
-			If you have an account choose <btn>Import Existing Account</btn> and go to Item #6
+			If you have an account choose <b>Import Existing Account</b> and go to Item #6
 		</p>
 	</td>
     <td>
@@ -25,7 +18,7 @@ btn{
 </tr>
 <tr>
     <td>
-		2. Choose unique account ID and click <p><btn>Reserve My Account ID</btn>
+		2. Choose unique account ID and click <b>Reserve My Account ID</b>
 	</td>
     <td>
 		<img src="../images/wallet/near-wallet-new-account.png">
@@ -33,7 +26,7 @@ btn{
 </tr>
 <tr>
     <td>
-		3. Choose Secure Passphrase as the most secured and the easyest to use. Push <btn>Continue</btn>
+		3. Choose Secure Passphrase as the most secured and the easyest to use. Push <b>Continue</b>
 	</td>
     <td>
 		<img  src="../images/wallet/near-wallet-choose-security.png">
@@ -41,7 +34,7 @@ btn{
 </tr>
 <tr>
     <td>
-		4. Save the phrase. Copy it and push <btn>Continue</btn>
+		4. Save the phrase. Copy it and push <b>Continue</b>
 	</td>
     <td>
 		<img  src="../images/wallet/near-wallet-security-phrase.png">
@@ -49,7 +42,7 @@ btn{
 </tr>
 <tr>
     <td>
-		5. Approve saving passphrase by entering some word whitch wallet ask you and press <btn>Verify & Complete</btn>
+		5. Approve saving passphrase by entering some word whitch wallet ask you and press <b>Verify & Complete</b>
 	</td>
     <td>
 		<img  src="../images/wallet/near-wallet-verify-phrase.png">
@@ -57,7 +50,7 @@ btn{
 </tr>
 <tr>
     <td>
-		6. Then paste your pathphrase to field <btn>Find My Account</btn>
+		6. Then paste your pathphrase to field <b>Find My Account</b>
 	</td>
     <td>
 		<img  src="../images/wallet/near-wallet-set-phrase.png">
@@ -75,23 +68,77 @@ btn{
 
 # VPS choice
 
-The best VPS offer I have found is <a href='https://contabo.com/en/vps/'>Contabo</a>
+Logically, VPS description has to be here (before next step) but it's topic of the **[Challenge 005](./content/challenge_005.md)**.
 
-Suitable solution for my requirements is CLOUD VPS L and it's quite powerfull than recommended  requirements
+# Deployment NEAR CLI
 
-| Hardware       | Chunk-Only Producer  Specifications   | Contabo CLOUD VPS L  |
-| -------------- | ------------------------------------  | -------------------- |
-| CPU            | 4-Core CPU with AVX support           |	8 vCPU				|
-| RAM            | 8GB DDR4                              |	30 GB				|
-| Storage        | 500GB SSD                             |	800GB SSD			|
+```bash
+# Update repositories and packages
+sudo apt update && sudo apt upgrade -y
+
+# Install Node.js and npm
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install build-essential nodejs
+PATH="$PATH"
+```
+
+```bash
+# Check Node and npm versions
+node -v
+> v18.6.0
+
+npm -v
+> 8.13.2
+```
+
+```bash
+# Install NEAR-CLI
+sudo npm install -g near-cli
+
+# Check NEAR-CLI version
+near --version
+> 3.4.0
+```
+
+### Set Shardnet as persistent environment
+
+```bash
+export NEAR_ENV=shardnet
+echo 'export NEAR_ENV=shardnet' >> ~/.bashrc
+```
+
+## NEAR CLI Commands
+
+### Proposals
+
+A proposal by a validator indicates they would like to enter the validator set, in order for a proposal to be accepted it must meet the minimum seat price.
+
+Command:
+```
+near proposals
+```
+![near proposals](../images/near_cli/near-proposals.png)
 
 
-<img  src="../images/vps/contabo-select-price.png" >
+### Validators Current
 
-## My configure below
+This shows a list of active validators in the current epoch, the number of blocks produced, number of blocks expected, and online rate. Used to monitor if a validator is having issues.
 
- <img  src="../images/vps/contabo-select-configure-1.png" width='500'>
- <img  src="../images/vps/contabo-select-configure-2.png" width='500'>
+Command:
+
+```
+near validators current
+```
+![near validators current](../images/near_cli/near-validators-current.png)
 
 
-# Deployment the NEAR CLI
+### Validators Next
+
+This shows validators whose proposal was accepted one epoch ago, and that will enter the validator set in the next epoch.
+
+Command:
+
+```
+near validators next
+```
+![near validators next](../images/near_cli/near-validators-next.png)
