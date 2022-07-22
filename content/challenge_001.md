@@ -68,7 +68,7 @@
 
 # VPS choice
 
-Logically, VPS description has to be here (before next step) but it's topic of the **[Challenge 005](./content/challenge_005.md)**.
+Logically, VPS description has to be here (before next step) but it's topic of the **[Challenge 005](./challenge_005.md)**.
 
 # Deployment NEAR CLI
 

@@ -1,15 +1,10 @@
-<h1>
-	The repository was created as report for challenge
-	<a href='https://github.com/near/stakewars-iii'>
-		Stake Wars: Episode III
-	</a>
-</h1>
+# Step-by-step instructions to mount a node validator [Stake Wars: Episode III](https://github.com/near/stakewars-iii)
 
-<div align='center'>
-<a href='https://github.com/near/stakewars-iii'>
-	<img src="https://near.org/wp-content/uploads/2022/06/stakewars3_logo_drk2-1.svg" alt="Near Stake Wars" width="150">
-</a>
-</div>
+<p align="center">
+	<a href='https://github.com/near/stakewars-iii'>
+		<img src="https://near.org/wp-content/uploads/2022/06/stakewars3_logo_drk2-1.svg" alt="Near Stake Wars" width="150">
+	</a>
+</p>
 
 ## [Challenge 001](./content/challenge_001.md)
 
@@ -17,12 +12,12 @@
 - [VPS choice](./content/challenge_001.md#vps-choice) <small>(challenge 005)</small>
 - [Deployment NEAR CLI](./content/challenge_001.md#Deployment-NEAR-CLI)
 
-## Challenge 002
+## [Challenge 002](./content/challenge_002.md)
 
-- Deployment a node
-- Downloading a snapshot
-- Syncing it to the actual state of the network
-- Setting neard as system service
+- [Deployment a node](./content/challenge_002.md#deployment-a-node)
+- [Downloading a snapshot](./content/challenge_002.md#downloading-a-snapshot)
+- [Activating the node as validator](./content/challenge_002.md#activating-the-node-as-validator)
+- [Setting neard as system service](./content/challenge_002.md#setting-neard-as-system-service)
 
 ## Challenge 003
 
@@ -36,8 +31,9 @@
 
 ## [Challenge 005](./content/challenge_005.md)
 
-- Creating this github repository
-- Pricing description
+- [VPS choice](./content/challenge_005.md#vps-choice)
+- Pricing for running the validator
+- [Creating new user](./content/challenge_005.md#creating-new-user)
 
 ## Challenge 006
 

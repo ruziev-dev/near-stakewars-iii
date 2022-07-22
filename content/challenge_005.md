@@ -21,3 +21,20 @@ Suitable solution for my requirements is CLOUD VPS L and it's quite powerfull th
 
 ![](../images/vps/contabo-after-payment.png)
 ![](../images/vps/contabo-connect-vps.png)
+
+# Creating new user
+### To avoid security problems we have to create user who won't super-user by default
+
+```bash
+useradd -m timur
+passwd timur
+> New password: # enter password
+> Retype new password: # repeat password
+> passwd: password updated successfully
+
+usermod -s /bin/bash timur
+sudo adduser timur sudo
+> Adding user timur to group sudo ...
+> Adding user timur to group sudo
+> Done.
+```
