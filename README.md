@@ -8,7 +8,7 @@
 
 ## [Challenge 001](./content/challenge_001.md)
 
-- [Shardnet wallet](./content/challenge_001.md#shardnet-wallet)
+- [New wallet acoount in Shardnet](./content/challenge_001.md#shardnet-wallet)
 - [VPS choice](./content/challenge_001.md#vps-choice) <small>(challenge 005)</small>
 - [Deployment NEAR CLI](./content/challenge_001.md#Deployment-NEAR-CLI)
 
@@ -19,15 +19,15 @@
 - [Activating the node as validator](./content/challenge_002.md#activating-the-node-as-validator)
 - [Setting neard as system service](./content/challenge_002.md#setting-neard-as-system-service)
 
-## Challenge 003
+## [Challenge 003](./content/challenge_003.md)
 
-- Deployment a new staking pool
-- Operations on staking pool to delegate and stake NEAR
+- [Mounting a staking pool](./content/challenge_003.md#mounting-a-staking-pool)
+- [Transactions Guide](./content/challenge_003.md#transactions-guide)
 
-## Challenge 004
+## [Challenge 004](./content/challenge_004.md)
 
-- Geting useful information from node by RPC on port 3030
-- Making alert
+- Getting useful information from node by RPC on port 3030
+- Setup tools for monitoring node status
 
 ## [Challenge 005](./content/challenge_005.md)
 

@@ -1,4 +1,4 @@
-# Shardnet wallet
+# New wallet acoount in Shardnet
 
 <table>
 <tr>
@@ -114,11 +114,12 @@ echo 'export NEAR_ENV=shardnet' >> ~/.bashrc
 A proposal by a validator indicates they would like to enter the validator set, in order for a proposal to be accepted it must meet the minimum seat price.
 
 Command:
+
 ```
 near proposals
 ```
-![near proposals](../images/near_cli/near-proposals.png)
 
+![near proposals](../images/near_cli/near-proposals.png)
 
 ### Validators Current
 
@@ -129,8 +130,8 @@ Command:
 ```
 near validators current
 ```
-![near validators current](../images/near_cli/near-validators-current.png)
 
+![near validators current](../images/near_cli/near-validators-current.png)
 
 ### Validators Next
 
@@ -141,4 +142,7 @@ Command:
 ```
 near validators next
 ```
+
 ![near validators next](../images/near_cli/near-validators-next.png)
+
+[Challenge 002 ⏭](./challenge_002.md)

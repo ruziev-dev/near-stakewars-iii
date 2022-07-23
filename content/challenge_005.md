@@ -23,6 +23,7 @@ Suitable solution for my requirements is CLOUD VPS L and it's quite powerfull th
 ![](../images/vps/contabo-connect-vps.png)
 
 # Creating new user
+
 ### To avoid security problems we have to create user who won't super-user by default
 
 ```bash
@@ -38,3 +39,7 @@ sudo adduser timur sudo
 > Adding user timur to group sudo
 > Done.
 ```
+
+|                                        |                                       |
+| -------------------------------------- | ------------------------------------- |
+| [⏮ Challenge 004 ](./challenge_004.md) | [Challenge 006 ⏭](./challenge_006.md) |

@@ -80,14 +80,14 @@ cd nearcore/
 git checkout 0f81dca95a55f975b6e54fe6f311a71792e21698
 ```
 
-![](../images/node/git-checkout.png)
-
 <details>
   <summary>❗ ACTUAL COMMIT</summary>
 
-### You can find actual commit in [Discord community](https://discord.com/channels/490367152054992913/991851497002381363/999977041178918942)
+You can find actual commit in [Discord community](https://discord.com/channels/490367152054992913/991851497002381363/999977041178918942)
 
 </details>
+
+![](../images/node/git-checkout.png)
 
 ### Compile nearcore binary:
 
@@ -95,7 +95,8 @@ git checkout 0f81dca95a55f975b6e54fe6f311a71792e21698
 cargo build -p neard --release --features shardnet
 ```
 
-After some minutes we will get:
+### After some minutes we will get:
+
 ![](../images/node/neard-compile.png)
 
 ### Check version:
@@ -288,3 +289,7 @@ View Logs with color
 ```bash
 journalctl -n 100 -f -u neard | ccze -A
 ```
+
+|                                        |                                       |
+| -------------------------------------- | ------------------------------------- |
+| [⏮ Challenge 001 ](./challenge_001.md) | [Challenge 003 ⏭](./challenge_003.md) |
