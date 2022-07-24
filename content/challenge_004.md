@@ -45,6 +45,7 @@ View call: timur.factory.shardnet.near.get_accounts({"from_index": 0, "limit": 1
 ```
 
 ### Check Reason Validator Kicked
+
 ```bash
 curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' 127.0.0.1:3030 | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("boot1.near"))' | jq .reason
 
@@ -58,6 +59,7 @@ curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params
 ```
 
 ### Check Blocks Produced / Expected
+
 ```bash
 curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' 127.0.0.1:3030 | jq -c '.result.current_validators[] | select(.account_id | contains ("boot1.near"))' | jq
 
@@ -78,8 +80,202 @@ curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params
 
 ```
 
-# Setup tools for monitoring node status
+# Node monitoring
 
-|                                        |                                       |
-| -------------------------------------- | ------------------------------------- |
+### Run node_exporter
+
+```bash
+sudo docker run -dit \
+    --restart always \
+    --volume /proc:/host/proc:ro \
+    --volume /sys:/host/sys:ro \
+    --volume /:/rootfs:ro \
+    --name node-exporter \
+    -p 9100:9100 prom/node-exporter:latest \
+    --path.procfs=/host/proc \
+    --path.sysfs=/host/sys
+
+```
+
+### Build near-prometeus
+
+```bash
+git clone https://github.com/masknetgoal634/near-prometheus-exporter
+
+cd near-prometheus-exporter
+
+sudo docker build -t near-prometheus-exporter .
+
+```
+
+### Run container
+
+```bash
+sudo docker run -dit \
+    --restart always \
+    --name near-exporter \
+    --network=host \
+    -p 9333:9333 \
+    near-prometheus-exporter:latest /dist/main -accountId timur.factory.shardnet.near
+
+```
+
+### Check it:
+
+```bash
+sudo docker ps -a
+
+# result
+> CONTAINER ID   IMAGE                             COMMAND                  CREATED              STATUS              PORTS                    NAMES
+> 5cf38c08b1d1   near-prometheus-exporter:latest   "/dist/main -account…"   16 seconds ago       Up 15 seconds                                near-exporter
+> f6106ab585c7   prom/node-exporter:latest         "/bin/node_exporter …"   About a minute ago   Up About a minute   0.0.0.0:9100->9100/tcp   node-exporter
+```
+
+### Configure Prometheus
+
+```bash
+cd ~/near-prometheus-exporter/etc
+nano prometheus/prometheus.yml
+
+# Fill in your node IP in targets
+
+  - job_name: node
+    scrape_interval: 5s
+    static_configs:
+    # - targets: ['<NODE_IP_ADDRESS>:9100']
+    - targets: ['38.242.250.37:9100']
+
+
+  - job_name: near-exporter
+    scrape_interval: 15s
+    static_configs:
+    # - targets: ['<NODE_IP_ADDRESS>:9333']
+    - targets: ['38.242.250.37:9333']
+
+
+  - job_name: near-node
+    scrape_interval: 15s
+    static_configs:
+    # - targets: ['<NODE_IP_ADDRESS>:3030']
+    - targets: ['38.242.250.37:3030']
+
+```
+
+### Run Prometheus
+
+```bash
+sudo docker run -dti \
+    --restart always \
+    --volume $(pwd)/prometheus:/etc/prometheus/ \
+    --name prometheus \
+    -p 9090:9090 prom/prometheus:latest \
+    --config.file=/etc/prometheus/prometheus.yml
+```
+
+### Run Graffana
+
+```bash
+
+# Check user ID
+id -u
+1000
+
+# Edit permission
+sudo chown -R 1000:1000 grafana/*
+
+sudo docker run -dit \
+    --restart always \
+    --volume $(pwd)/grafana:/var/lib/grafana \
+    --volume $(pwd)/grafana/provisioning:/etc/grafana/provisioning \
+    --volume $(pwd)/grafana/custom.ini:/etc/grafana/grafana.ini \
+    --user 1000 \
+    --name grafana \
+    -p 3000:3000 grafana/grafana
+
+```
+
+> ❗ IF YOU CATCH SOME ERROR
+>
+> go to file grafana/custom.ini
+>
+> ```bash
+> nano ~/near-prometheus-exporter/etc/grafana/custom.ini
+>
+> #remove or comment rows
+> ;user = <your API key>        # <- like this
+> ;password = <your secret key> # <- like this
+> ;cert_file =
+> ;key_file =
+> ;from_address = <your_email_address> # <- like this
+>
+> ```
+>
+> Then run it agian
+
+```bash
+sudo docker ps -a
+
+# result
+> CONTAINER ID   IMAGE                             COMMAND                  CREATED              STATUS              PORTS                    NAMES
+> 55efc9ce325a   grafana/grafana                   "/run.sh"                About a minute ago   Up About a minute   0.0.0.0:3000->3000/tcp   grafana
+> 3431bfb8287b   prom/prometheus:latest            "/bin/prometheus --c…"   3 minutes ago        Up 3 minutes                                 prometheus
+> 5cf38c08b1d1   near-prometheus-exporter:latest   "/dist/main -account…"   6 minutes ago        Up 6 minutes                                 near-exporter
+> f6106ab585c7   prom/node-exporter:latest         "/bin/node_exporter …"   7 minutes ago        Up 7 minutes        0.0.0.0:9100->9100/tcp   node-exporter
+
+```
+
+### Go to Grafana
+
+### Go to **<'YOUR-HOST-IP'>:3000**, log in with **admin**/**admin**
+
+![img](../images/monitoring/grafana-auth.png)
+
+### Create new password
+
+![img](../images/monitoring/grafana-new-password.png)
+
+### Go to **Settings** -> **Data Sources** -> **Prometheus**
+
+Click **Save & test** if everythig is ok, go to next step, otherwise change default URL on http://172.17.0.1:9090 and click **Save & test** again. It has to work!
+
+|                                                         | Change URL if there is en error                      |
+| ------------------------------------------------------- | ---------------------------------------------------- |
+| ![img](../images/monitoring/grafana-data-source-ok.png) | ![img](../images/monitoring/grafana-data-source.png) |
+
+### After success source update you can see the great dashboard
+
+![img](../images/monitoring/grafana-dashboard.png)
+
+# Email notification
+
+### I've used https://app.smtp2go.com/. You can use any another SMTP service. You have to create SMTP user and sender.
+
+| ![img](../images/monitoring/smtp-user.png) | ![img](../images/monitoring/smtp-sender.png) |
+| ------------------------------------------ | -------------------------------------------- |
+
+### Then add the information on your grafana/custom.ini file in block [smtp]
+```bash
+nano ~/near-prometheus-exporter/etc/grafana/custom.ini
+```
+![img](../images/monitoring/smtp-config.png)
+
+### Restart grafana to apply changes
+
+```bash
+sudo docker container restart grafana
+```
+
+### Open Grafana -> Alerting -> Concact points
+
+Create new contact point here and send test notification.
+![img](../images/monitoring/grafana-alerting.png)
+
+### 🎉 We got test notification on email!
+
+![img](../images/monitoring/e-mail.jpg)
+
+### ❗ To set events which will activate sending messages we have to make settings in Alert rule tab.
+
+
 | [⏮ Challenge 003 ](./challenge_003.md) | [Challenge 005 ⏭](./challenge_005.md) |
+| -------------------------------------- | ------------------------------------- |

@@ -177,6 +177,5 @@ https://explorer.shardnet.near.org/transactions/Gfib7Hrwkvc9jzzawcmSgqVfvXRgP7ty
 ''
 ```
 
-|                                        |                                       |
-| -------------------------------------- | ------------------------------------- |
 | [⏮ Challenge 002 ](./challenge_002.md) | [Challenge 004 ⏭](./challenge_004.md) |
+| -------------------------------------- | ------------------------------------- |
