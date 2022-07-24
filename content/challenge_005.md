@@ -52,5 +52,5 @@ sudo adduser timur sudo
 > Done.
 ```
 
-| [⏮ Challenge 004 ](./challenge_004.md) | [Challenge 005 ⏭](./challenge_005.md) |
+| [⏮ Challenge 004 ](./challenge_004.md) | [Challenge 006 ⏭](./challenge_006.md) |
 | -------------------------------------- | ------------------------------------- |

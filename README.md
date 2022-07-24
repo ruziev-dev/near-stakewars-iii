@@ -1,14 +1,14 @@
 # Step-by-step instructions to mount a node validator [Stake Wars: Episode III](https://github.com/near/stakewars-iii)
 
-<p style="text-align:center">
+<div align="center">
 	<a href='https://github.com/near/stakewars-iii'>
 		<img src="https://near.org/wp-content/uploads/2022/06/stakewars3_logo_drk2-1.svg" alt="Near Stake Wars" width="150">
 	</a>
-</p>
+</div>
 
 ## [Challenge 001](./content/challenge_001.md)
 
-- [New wallet acoount in Shardnet](./content/challenge_001.md#shardnet-wallet)
+- [New wallet account in Shardnet](./content/challenge_001.md#shardnet-wallet)
 - [VPS choice](./content/challenge_001.md#vps-choice) <small>(challenge 005)</small>
 - [Deployment NEAR CLI](./content/challenge_001.md#Deployment-NEAR-CLI)
 

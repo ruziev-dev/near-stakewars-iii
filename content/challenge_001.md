@@ -1,4 +1,4 @@
-# New wallet acoount in Shardnet
+# New wallet account in Shardnet
 
 <table>
 <tr>
@@ -50,7 +50,7 @@
 </tr>
 <tr>
     <td>
-		6. Then paste your pathphrase to field <b>Find My Account</b>
+		6. Then paste your passphrase to field <b>Find My Account</b>
 	</td>
     <td>
 		<img  src="../images/wallet/near-wallet-set-phrase.png">
