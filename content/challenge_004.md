@@ -254,9 +254,11 @@ Click **Save & test** if everythig is ok, go to next step, otherwise change defa
 | ------------------------------------------ | -------------------------------------------- |
 
 ### Then add the information on your grafana/custom.ini file in block [smtp]
+
 ```bash
 nano ~/near-prometheus-exporter/etc/grafana/custom.ini
 ```
+
 ![img](../images/monitoring/smtp-config.png)
 
 ### Restart grafana to apply changes
@@ -276,6 +278,69 @@ Create new contact point here and send test notification.
 
 ### ❗ To set events which will activate sending messages we have to make settings in Alert rule tab.
 
+# Telegram notifications
+
+I have developed my own script on Node.js, which follow node state and check validator status. My script is placed [**here**](https://github.com/ruziev-dev/near-node-tg-bot)
+
+### Create new bot by writing
+
+Clone repository & install dependencies
+
+```bash
+git clone https://github.com/ruziev-dev/near-node-tg-bot.git
+
+cd near-node-tg-bot
+
+npm i
+```
+
+Make your `config.env` file by example `.env`
+
+```bash
+cp .env config.env
+```
+
+Set your settings to `config.env`
+
+```bash
+nano config.env
+
+# set your values
+TG_API_KEY="5554842487:AAGYMCP*****************"
+TG_CHAT_ID="175575260"
+NODE_RPC="127.0.0.1:3030"
+POOL_ID="timur.factory.shardnet.near"
+```
+
+- TG_API_KEY - you can get from [**@BotFather**](https://t.me/BotFather)
+  ![img](../images/monitoring/tg_new_bot.png)
+- TG_CHAT_ID - you can by using [**@GetIDs Bot**](https://t.me/getidsbot)
+  ![img](../images/monitoring/get_tg_id.png)
+
+### Run Telegram Notificator Script by cron
+
+To run it automatically let's add chron task every minute
+
+```
+crontab -e
+```
+
+Add this row with setting path to Node.js and script
+
+```bash
+# set your path
+*/1 * * * * cd /home/timur/near-node-tg-bot/ && /bin/node index.js > /dev/null 2>&1
+```
+
+Reload cron service to start execute script
+
+```bash
+sudo service cron reload
+```
+
+**🥳 Great, we can get messages, from node**
+
+![img](../images/monitoring/tg_notifications.png)
 
 | [⏮ Challenge 003 ](./challenge_003.md) | [Challenge 005 ⏭](./challenge_005.md) |
 | -------------------------------------- | ------------------------------------- |
