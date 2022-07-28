@@ -312,10 +312,10 @@ NODE_RPC="127.0.0.1:3030"
 POOL_ID="timur.factory.shardnet.near"
 ```
 
-- TG_API_KEY - you can get from [**@BotFather**](https://t.me/BotFather)
-  ![img](../images/monitoring/tg_new_bot.png)
-- TG_CHAT_ID - you can by using [**@GetIDs Bot**](https://t.me/getidsbot)
-  ![img](../images/monitoring/get_tg_id.png)
+| Value                                                                     | How to get                                  |
+| ------------------------------------------------------------------------- | ------------------------------------------- |
+| TG_API_KEY - you can get it from [**@BotFather**](https://t.me/BotFather) | ![img](../images/monitoring/tg_new_bot.png) |
+| TG_CHAT_ID - you can by using [**@GetIDs Bot**](https://t.me/getidsbot)   | ![img](../images/monitoring/get_tg_id.png)  |
 
 ### Run Telegram Notificator Script by cron
 
