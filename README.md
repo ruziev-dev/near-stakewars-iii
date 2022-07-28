@@ -29,7 +29,7 @@
 - [Getting useful information from node by RPC on port 3030](./content/challenge_004.md#getting-useful-information-from-node-by-rpc-on-port-3030)
 - [Node monitoring](./content/challenge_004.md#node-monitoring)
 - [Email notifications](./content/challenge_004.md#email-notification)
-- ❗ TODO: [Telegram notification](./content/challenge_004.md#telegram-notification)
+- [Telegram notification](./content/challenge_004.md#telegram-notification)
 
 ## [Challenge 005](./content/challenge_005.md)
 
