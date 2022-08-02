@@ -107,5 +107,5 @@ https://explorer.shardnet.near.org/transactions/4VbH5rwtvhFpBTWiA7n4n7x1peU7cmXT
 
 ![img](../images/pool/ping-log.png)
 
-| [⏮ Challenge 005 ](./challenge_005.md) | <!-- [Challenge 007 ⏭](./challenge_007.md) --> |
-| -------------------------------------- | ---------------------------------------------- |
+| [⏮ Challenge 005 ](./challenge_005.md) | [Challenge 007 ⏭](./challenge_007.md) |
+| -------------------------------------- | ------------------------------------- |

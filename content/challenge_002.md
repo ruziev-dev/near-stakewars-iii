@@ -48,7 +48,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Press 1 and press enter. Wait some time and see:
 
 ```bash
-Rust is installed now. Great!
+> Rust is installed now. Great!
 ```
 
 ### Source the environment
