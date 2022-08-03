@@ -77,17 +77,17 @@ cd nearcore/
 ### Checkout to the commit needed
 
 ```bash
-git checkout 0f81dca95a55f975b6e54fe6f311a71792e21698
+# it is actual commit on August 2, 2022
+git checkout 68bfa84ed1455f891032434d37ccad696e91e4f5
 ```
 
 <details>
   <summary>❗ ACTUAL COMMIT</summary>
 
-You can find actual commit in [Discord community](https://discord.com/channels/490367152054992913/991851497002381363/999977041178918942)
+You can find actual commit in [Discord community](https://discord.com/channels/490367152054992913/999047336229617704)
 
 </details>
 
-![](../images/node/git-checkout.png)
 
 ### Compile nearcore binary:
 
@@ -103,7 +103,7 @@ cargo build -p neard --release --features shardnet
 
 ```bash
 ./target/release/neard -V
-neard (release trunk) (build crates-0.14.0-234-g0f81dca95) (rustc 1.62.0) (protocol 100) (db 31)
+neard (release trunk) (build 1.1.0-2565-g68bfa84ed) (rustc 1.62.1) (protocol 100) (db 31)
 ```
 
 ### Initialize working directory:
