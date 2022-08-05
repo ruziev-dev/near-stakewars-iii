@@ -103,6 +103,8 @@ NEAR_ENV=shardnet near call $CONTRACT_ID new '{"staking_pool_account_id": "timur
 
 ![img](../images/pool/poolowner-contract.png)
 
+## Withdraw
+
 Wait until you start receiving rewards on your node staking pool. Do a withdraw of rewards.
 
 ```bash

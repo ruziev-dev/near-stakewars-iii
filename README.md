@@ -47,8 +47,8 @@
 ## [Challenge 008](./content/challenge_008.md)
 
 - [Prepare environment](./content/challenge_008.md#prepare-environment)
-- [Create new account to deploy smart contract](./content/challenge_008.md#create-new-account-to-deploy-smart-contract)
 - [Deploy smart contract](./content/challenge_008.md#deploy-smart-contract)
+- [Withdraw](./content/challenge_008.md#withdraw)
 
 ## [Challenge 009](./content/challenge_009.md)
 
