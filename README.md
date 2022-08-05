@@ -50,6 +50,9 @@
 - [Create new account to deploy smart contract](./content/challenge_008.md#create-new-account-to-deploy-smart-contract)
 - [Deploy smart contract](./content/challenge_008.md#deploy-smart-contract)
 
-## Challenge 009
+## [Challenge 009](./content/challenge_009.md)
 
-- TODO: implement it
+- [Open port 3030 for report diagnostic](./content/challenge_009.md#open-port-3030-for-diagnostic-reporting)
+- [Strict submission report](./content/challenge_009.md#strict-submission-report)
+  <small>(scoreboard screenshot has to be updated)</small>
+- [My uptime report](./content/challenge_009.md#my-uptime-report)
