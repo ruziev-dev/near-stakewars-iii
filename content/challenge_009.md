@@ -47,7 +47,7 @@ You can create request to http://<YOUR IP>:3030/status by your browser or Postma
 
 ## Strict report:
 
-- Link to my node: http://38.242.250.37:3030/status
+- Link to my node: http://157.90.120.21:3030/status
 - Upteme screenshot from [**openshards.io**](https://openshards.io/shardnet-uptime-scoreboard/) you can see in table below\*
 
 <b>\*</b> There were lots of techicahal network problems. Few hardforks and network stucking doesn't influence positive on uptime percentage. I have missed 12 epochs because of problems.
