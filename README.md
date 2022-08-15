@@ -40,9 +40,12 @@
 
 - [Automate ping the network by crontab](./content/challenge_006.md#automate-ping-the-network-by-crontab)
 
-## Challenge 007
+## [Challenge 007](./content/challenge_007.md)
 
-- TODO: implement it
+- [Source List](./content/challenge_007.md#source-list)
+- [Research Goals](./content/challenge_007.md#research-goals)
+- [Technical Implementation](./content/challenge_007.md#technical-implementation)
+- [Dashboard](./content/challenge_007.md#dashboard)
 
 ## [Challenge 008](./content/challenge_008.md)
 
