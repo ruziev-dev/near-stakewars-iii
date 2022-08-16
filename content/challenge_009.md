@@ -55,7 +55,7 @@ You can create request to http://<YOUR IP>:3030/status by your browser or Postma
 | **INFO**                    | **SCREENSHOT**                                                   |
 | --------------------------- | ---------------------------------------------------------------- |
 | August 5 <br><br> **55,3%** | ![img](../images/scoreboard/05-08-2022_stakewars-scoreboard.PNG) |
-| August 6 <br><br> **55,6%** |![img](../images/scoreboard/06-08-2022_stakewars-scoreboard.PNG)                                                     |
+| August 6 <br><br> **55,6%** | ![img](../images/scoreboard/06-08-2022_stakewars-scoreboard.PNG) |
 
 ## My uptime report
 

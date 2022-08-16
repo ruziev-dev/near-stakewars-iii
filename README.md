@@ -59,3 +59,14 @@
 - [Strict submission report](./content/challenge_009.md#strict-submission-report)
   <small>(scoreboard screenshot has to be updated)</small>
 - [My uptime report](./content/challenge_009.md#my-uptime-report)
+
+## Challenge 010
+
+## Challenge 011
+
+## Challenge 012
+
+## [Challenge 013](./content/challenge_013.md)
+
+- [Preparing new host](./content/challenge_013.md#preparing-new-host)
+- [Keys transmitting](./content/challenge_013.md#keys-transmitting)
