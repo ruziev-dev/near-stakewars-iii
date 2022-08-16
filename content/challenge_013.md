@@ -10,9 +10,9 @@ I had to move to another service. For prepairing I have completed next steps:
 3. [Challenge 002 - Downloading a snapshot](./challenge_002.md#downloading-a-snapshot)
 4. [Challenge 002 - Setting neard as system service](./challenge_002.md#setting-neard-as-system-service)
 
-## Keys transmitting
-
 Then I waited downloading previous blocks data and I have used `scp` util to transmit data over SSH connection between hosts.
+
+## Keys transmitting
 
 ```bash
 scp /home/timur/.near/validator_key.json  timur@65.109.30.186:/home/timur/.near/
