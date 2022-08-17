@@ -27,17 +27,19 @@ export NEAR_ENV=shardnet
 export LOGS=/home/timur/logs
 
 #export POOLID=<YOUR_POOL_ID>
-export POOLID=timur
+export POOLID=timur.factory.shardnet.near
 
 #export ACCOUNTID=<YOUR_ACCOUNT_ID>
-export ACCOUNTID=timur
+export ACCOUNTID=timur.shardnet.near
 
-echo "---" >> $LOGS/all.log
-date >> $LOGS/all.log
-near call $POOLID.factory.shardnet.near ping '{}' --accountId $ACCOUNTID.shardnet.near --gas=300000000000000 >> $LOGS/all.log
-near proposals | grep $POOLID >> $LOGS/all.log
-near validators current | grep $POOLID >> $LOGS/all.log
-near validators next | grep $POOLID >> $LOGS/all.log
+export LOGS_FILE_PATH=$LOGS/$(date '+%Y-%m-%d').log
+
+echo "---" >> $LOGS_FILE_PATH
+date >> $LOGS_FILE_PATH
+near call $POOLID ping '{}' --accountId $ACCOUNTID --gas=300000000000000 >> $LOGS_FILE_PATH
+near proposals | grep $POOLID >> $LOGS_FILE_PATH
+near validators current | grep $POOLID >> $LOGS_FILE_PATH
+near validators next | grep $POOLID >> $LOGS_FILE_PATH
 ```
 
 ### Create a new crontab, running every 5 minutes:
@@ -68,7 +70,7 @@ crontab -l
 Review your logs:
 
 ```bash
-cat ~/logs/all.log
+cat ~/logs/2022-07-23.log
 
 # result
 Sat 23 Jul 2022 10:50:01 PM CEST
