@@ -32,7 +32,15 @@ cat validator_key.json | jq | grep public_key
 
 ![scp backup](../images/node/backup_proof.png)
 
-### **❗Important №1** Remove or chande name for files `validator_key.json` and `node_key.json` on old host
+Update IP adress in `config.json`
+
+```bash
+nano config.json
+```
+
+![scp backup](../images/node/backup_change_config_ip_addr.png)
+
+### **Important ❗** Remove or chande name for files `validator_key.json` and `node_key.json` on old host
 
 ```bash
 mv validator_key.json _validator_key.json
@@ -43,7 +51,7 @@ ls
 > config.json  data  genesis.json  _node_key.json  _validator_key.json
 ```
 
-### **❗Important №2 First** You must stop neard daemon on old host then you can restart your daemon on new host with new keys
+### **Important ❗** First You must stop neard daemon on old host then you can restart your daemon on new host with new keys
 
 1. Stop daemon neard on old host
 
