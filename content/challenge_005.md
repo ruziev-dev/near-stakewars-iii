@@ -1,5 +1,8 @@
 # VPS choice
 
+> My solution in this challenge was wrong. I got quite a lot problems with Contabo.
+> After moving on dedicated server on Hetzner in [Challenge 013](./challenge_013.md) some my problems were solved: my uptime and produced/expected chunks ration have increased.
+
 I have used [HostAdvice](https://hostadvice.com/vps/linux/?disk_space=200-999999999&disk_type=ssd&ram=8192-131072&cpu=4&sort=recommendations) to find suitable VPS solution.
 
 | Filters I used                     | I got                                         |
