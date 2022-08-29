@@ -56,15 +56,15 @@
 ## [Challenge 009](./content/challenge_009.md)
 
 - [Open port 3030 for report diagnostic](./content/challenge_009.md#open-port-3030-for-diagnostic-reporting)
-- [Strict submission report](./content/challenge_009.md#strict-submission-report)
+- [Uptime report](./content/challenge_009.md#uptime-report)
   <small>(scoreboard screenshot has to be updated)</small>
-- [My uptime report](./content/challenge_009.md#my-uptime-report)
 
-## Challenge 010
+## [Challenge 011](./content/challenge_011.md)
 
-## Challenge 011
-
-## Challenge 012
+- [Current staking approach](./content/challenge_011.md#current-staking-approach)
+- [My ideas](./content/challenge_011.md#my-ideas)
+  - [Charity staking](./content/challenge_011.md#1-charity-staking)
+  - [Membership or subscription staking](./content/challenge_011.md#2-membershipsubscription)
 
 ## [Challenge 013](./content/challenge_013.md)
 
