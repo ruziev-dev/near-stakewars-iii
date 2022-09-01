@@ -70,3 +70,7 @@
 
 - [Preparing new host](./content/challenge_013.md#preparing-new-host)
 - [Keys transmitting](./content/challenge_013.md#keys-transmitting)
+
+## [Challenge 014](./content/challenge_014.md)
+
+- [Auto-backup node script](./content/challenge_014.md#auto-backup-node-script)

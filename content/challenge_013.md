@@ -65,5 +65,5 @@ sudo systemctl stop neard
 sudo systemctl restart neard
 ```
 
-| <!--  [⏮ Challenge 012 ](./challenge_012.md)  --> | <!--  [Challenge 014 ⏭](./challenge_014.md) --> |
-| ------------------------------------------------- | ----------------------------------------------- |
+| [⏮ Challenge 011 ](./challenge_011.md) | [Challenge 014 ⏭](./challenge_014.md) |
+| -------------------------------------- | ------------------------------------- |
