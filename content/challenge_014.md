@@ -10,7 +10,6 @@ cd scripts
 nano autobackup.sh
 ```
 
-
 ```bash
 #!/bin/bash
 
@@ -67,8 +66,8 @@ fi
 
 ```
 
-
 Add exacutable permissions
+
 ```bash
 chmod +x autobackup.sh
 ```
@@ -123,12 +122,9 @@ sudo nano /etc/crontab
 0 12 *  *  *  timur   /home/timur/scripts/autobackup.sh >> /home/timur/logs/backup.log 2>&1
 ```
 
-
 In script conclusion it notifies pool owner by Telegram with messages like below:
 
 ![img](../images/monitoring/backup_notifications.png)
 
-
-
-| [⏮ Challenge 013 ](./challenge_013.md) | <!--  [Challenge 015 ⏭](./challenge_015.md) --> |
-| -------------------------------------- | ----------------------------------------------- |
+| [⏮ Challenge 013 ](./challenge_013.md) | [Challenge 016 ⏭](./challenge_016.md) |
+| -------------------------------------- | ------------------------------------- |
