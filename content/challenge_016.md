@@ -1,10 +1,14 @@
 # Connect a node validator for sending notifications through Notifi
 
+## Getting credentials
+
 I got credentials on my e-mail on the second day after completeng form by link shared [#integration-requests](https://discord.com/invite/nAqR3mk3rv) in Discord channel.
 
 ![img](../images/monitoring/notifi-service-credentials.png)
 
 To complete the task I have created Node.js script and shared it in repository: https://github.com/ruziev-dev/notifi-near-integration
+
+## Apply script
 
 ```bash
 git clone https://github.com/ruziev-dev/notifi-near-integration.git
@@ -21,7 +25,6 @@ cp example.env .env
 
 nano .env
 ```
-
 
 ```bash
 POOL_ID="timur.factory.shardnet.near"

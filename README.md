@@ -74,3 +74,9 @@
 ## [Challenge 014](./content/challenge_014.md)
 
 - [Auto-backup node script](./content/challenge_014.md#auto-backup-node-script)
+
+## [Challenge 016](./content/challenge_016.md)
+
+- [Getting credentials](./content/challenge_016.md#getting-credentials)
+- [Apply script](./content/challenge_016.md#apply-script)
+- [Add task by crontab](./content/challenge_016.md#add-task-by-crontab)
