@@ -39,7 +39,7 @@ ip6tables-save > /etc/iptables/rules.v6
 
 ### Validate the port is open
 
-You can create request to http://<YOUR IP>:3030/status by your browser or Postman, and see information like this:
+You can create request to http://`<YOUR IP>`:3030/status by your browser or Postman, and see information like this:
 
 ![img](../images/node/port_3030_status.png)
 
