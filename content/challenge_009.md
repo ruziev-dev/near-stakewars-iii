@@ -2,8 +2,6 @@
 
 ## Open Port 3030 for Diagnostic reporting
 
-We have intalled Rust and Cargo on [Challenge 002](./challenge_002.md), you can check it
-
 ```bash
 sudo iptables -L | grep 3030
 # my result
@@ -45,12 +43,12 @@ You can create request to http://<YOUR IP>:3030/status by your browser or Postma
 
 ![img](../images/node/port_3030_status.png)
 
-## Uptime report:
+## Report:
 
 - Link to my node: http://65.109.30.186:3030/status
-- Upteme screenshot from [**openshards.io**](https://openshards.io/shardnet-uptime-scoreboard/) you can see in table below
+- Uptime screenshot from [**openshards.io**](https://openshards.io/shardnet-uptime-scoreboard/) actual on the 4 of September you can see in picture below
 
-TODO: add screenshot here
+![scoreboard](../images/scoreboard/04-09-2022.png)
 
 | [⏮ Challenge 008 ](./challenge_008.md) | [Challenge 011 ⏭](./challenge_011.md) |
 | -------------------------------------- | ------------------------------------- |

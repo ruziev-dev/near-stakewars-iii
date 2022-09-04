@@ -68,5 +68,5 @@ Add this row with setting path to Node.js and script
 0 0 * * * cd /home/timur/notifi-near-integration && /usr/bin/node build/index.js > /dev/null 2>&1
 ```
 
-| [⏮ Challenge 014 ](./challenge_014.md) | <!--  [Challenge 015 ⏭](./challenge_015.md) --> |
-| -------------------------------------- | ----------------------------------------------- |
+| [⏮ Challenge 014 ](./challenge_014.md) | [Challenge 019 ⏭](./challenge_019.md) |
+| -------------------------------------- | ------------------------------------- |

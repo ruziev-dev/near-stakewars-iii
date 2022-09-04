@@ -57,7 +57,6 @@
 
 - [Open port 3030 for report diagnostic](./content/challenge_009.md#open-port-3030-for-diagnostic-reporting)
 - [Uptime report](./content/challenge_009.md#uptime-report)
-  <small>(scoreboard screenshot has to be updated)</small>
 
 ## [Challenge 011](./content/challenge_011.md)
 
@@ -80,3 +79,7 @@
 - [Getting credentials](./content/challenge_016.md#getting-credentials)
 - [Apply script](./content/challenge_016.md#apply-script)
 - [Add task by crontab](./content/challenge_016.md#add-task-by-crontab)
+
+## [Challenge 019](./content/challenge_019.md)
+
+- [Graffana Dashboard](./content/challenge_019.md#graffana-dashboard)
