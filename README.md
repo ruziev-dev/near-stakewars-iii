@@ -83,3 +83,7 @@
 ## [Challenge 019](./content/challenge_019.md)
 
 - [Graffana Dashboard](./content/challenge_019.md#graffana-dashboard)
+
+## [Challenge 020](./content/challenge_020.md)
+
+- [Telegram Bot Script](./content/challenge_020.md#telegram-bot-script)

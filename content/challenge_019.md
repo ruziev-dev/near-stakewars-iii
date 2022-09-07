@@ -26,4 +26,5 @@ After that I have seen such dashboard:
 
 ![img](../images/monitoring/grafana-dashboard_v2.png)
 
-[⏮ Challenge 016 ](./challenge_016.md)
+| [⏮ Challenge 016 ](./challenge_016.md) | [Challenge 020 ⏭](./challenge_020.md) |
+| -------------------------------------- | ------------------------------------- |
